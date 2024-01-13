@@ -1,10 +1,13 @@
 const express = require('express');
 
-const {index, newMessage} = require('../controllers/index');
+const {getIndex, getNewMessage, postNewMessage} = require('../controllers/index');
 
 const router = express.Router();
 
-router.get('/', index);
+router.get('/', getIndex);
 
+router.get('/new', getNewMessage);
+
+router.post('/new', postNewMessage)
 
 module.exports = router;
