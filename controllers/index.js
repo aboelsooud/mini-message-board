@@ -3,7 +3,7 @@ express = require('express');
 const Message = require('../models/message');
 
 async function getIndex(req, res) {
-    const messages = await Message.find();
+    const messages = await Message.find().sort({added: -1});
     res.render('index', { title: 'Mini Message Board', messages: messages });
 }
 
