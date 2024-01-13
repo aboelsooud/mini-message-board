@@ -11,7 +11,7 @@
       <% for(let i=0; i< messages.length; i++) {%>
         <section style="border: 1px solid black; padding: 10px; margin: 10px;">
           <p> <strong>User:</strong> <%= messages[i].user %> </p>
-          <em> <strong>Added at:</strong> <%= messages[i].added %> </em>
+          <em> <strong>Added at:</strong> <%= messages[i].added.toLocaleString() %> </em>
           <p> <strong>Message:</strong> <%= messages[i].text %> </p>
         </section>
       <% } %>
