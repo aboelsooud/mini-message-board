@@ -1,9 +1,9 @@
 express = require('express');
 
-
-const messages = []
+const Message = require('../models/message');
 
 async function getIndex(req, res) {
+    const messages = await Message.find();
     res.render('index', { title: 'Mini Message Board', messages: messages });
 }
 
@@ -13,8 +13,15 @@ async function getNewMessage(req, res) {
 
 async function postNewMessage(req, res){
     const {user, text} = req.body;
-    messages.unshift({user, text, added: new Date().toLocaleString()});
-    res.redirect('/');
+    try{
+        const message = new Message({user, text, added: new Date()});
+        await message.save();
+        res.redirect('/');
+    }catch(err){
+        console.log(err);
+        res.status(500).send('Error saving message');
+    }
+    
 }
 
 module.exports = {
