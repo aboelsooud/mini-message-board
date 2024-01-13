@@ -2,6 +2,7 @@ const path = require('path');
 
 const express = require('express');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 
 require('dotenv').config();
 
@@ -23,6 +24,12 @@ const indexRouter = require('./routes/index');
 app.use('/', indexRouter);
 
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server running on port ${process.env.PORT}`);
+mongoose.connect(process.env.MONGO_URI).then(() => {
+    console.log('Connected to database');
+    app.listen(process.env.PORT, () => {
+        console.log(`Server running on port ${process.env.PORT}`);
+    });
+}).catch((err) => {
+    console.log(err);
 });
+
