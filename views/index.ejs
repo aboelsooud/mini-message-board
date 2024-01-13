@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2> Add New Message from <a href="/new">here</a> </h2>
+    <h2> Board Messages </h2>
+      <% for(let i=0; i< messages.length; i++) {%>
+        <section style="border: 1px solid black; padding: 10px; margin: 10px;">
+          <p> <strong>User:</strong> <%= messages[i].user %> </p>
+          <em> <strong>Added at:</strong> <%= messages[i].added %> </em>
+          <p> <strong>Message:</strong> <%= messages[i].text %> </p>
+        </section>
+      <% } %>
+  </body>
+</html>

@@ -17,6 +17,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Routes setup
+const indexRouter = require('./routes/index');
+
+app.use('/', indexRouter);
 
 
 app.listen(process.env.PORT, () => {
