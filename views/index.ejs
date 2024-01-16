@@ -5,15 +5,19 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <h2> Add New Message from <a href="/new">here</a> </h2>
-    <h2> Board Messages </h2>
-      <% for(let i=0; i< messages.length; i++) {%>
-        <section style="border: 1px solid black; padding: 10px; margin: 10px;">
-          <p> <strong>User:</strong> <%= messages[i].user %> </p>
-          <em> <strong>Added at:</strong> <%= messages[i].added.toLocaleString() %> </em>
-          <p> <strong>Message:</strong> <%= messages[i].text %> </p>
-        </section>
-      <% } %>
+    <h1 class="main-header"><a href="/"><%=title%></a></h1>
+    <button class="add-message"><a href="/new">Add New Message</a></button>
+    <p>Welcome to <%=title%>, here is the latest messages:</p>
+      <section class="messages-list">
+        <% for(let i=0; i< messages.length; i++) {%>
+          <section class="message-container">
+            <div class="user-heading">
+              <p class="user-name"><strong><%= messages[i].user %></strong></p>
+              <p class="message-date"><%= messages[i].added.toLocaleString() %></p>
+            </div>
+            <p> <%= messages[i].text %> </p>
+          </section>
+        <% } %>
+      </section>
   </body>
 </html>

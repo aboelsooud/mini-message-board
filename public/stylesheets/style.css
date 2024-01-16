@@ -1,8 +1,114 @@
 body{
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 1rem;
+    font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
 }
-  
-a{
-    color: #00B7FF;
+
+.main-header{
+    font-size: 2.5rem;
+}
+
+.main-header a{
+    text-decoration: none;
+    color: #696969;
+}
+
+.add-message{
+    font-size: 1.2rem;
+    background-color: #800020;
+    color: white;
+    border-radius: 15px;
+    padding : 0.5rem;
+    min-width: 20rem;
+    cursor: pointer;
+}
+
+
+.add-message a{
+    text-decoration: none;
+    color: white;
+}
+
+.add-message:hover{
+    background-color: #6a011c;
+}
+
+.messages-list{
+    height: auto;
+    width: 75vw;
+}
+
+.message-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-left: 2.5px solid #800020;
+    margin-bottom: 3vh;
+    padding-left: 1.2vw;
+}
+
+.user-heading{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.user-name{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.message-date{
+    font-size: 0.7rem;
+    color: #696969;
+    font-style: italic;
+}
+
+.new-message-header{
+    font-size: 2rem;
+    color: #696969;
+}
+
+.new-message-form{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75vw;
+    height: auto;
+    gap: 1vh;
+}
+
+label {
+    font-size: 1.5em;
+    width: 70vw;
+}
+
+input {
+    min-height: 3vh;
+    width: 70vw;
+    font-size: 1.5em;
+}
+
+
+.submit-button {
+    font-size: 1.2rem;
+    background-color: #800020;
+    color: white;
+    border-radius: 15px;
+    padding : 0.5rem;
+    min-width: 30rem;
+    cursor: pointer;
+}
+
+.submit-button:hover{
+    background-color: #6a011c;
 }
