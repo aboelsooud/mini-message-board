@@ -20,8 +20,6 @@ This project uses the following technologies:
 Mini Message Board has the following features:
 
 - **Simple and intuitive interface**: The mini-message-board app has a user-friendly design that allows users to easily post and view messages on a public board. Users can also see the date and time of each message.
-- **Express and EJS**: The app is built with Express, a fast and flexible web framework for Node.js, and EJS, a templating engine that lets you generate HTML with JavaScript.
-- **MongoDB and Mongoose**: The app uses MongoDB, a popular NoSQL database, and Mongoose, an object data modeling (ODM) library, to store and manage the messages. MongoDB provides high performance and scalability, while Mongoose simplifies the validation and query process.
 - **Docker and docker-compose**: The app is dockerized, meaning it can run inside a container that isolates it from the host environment. This makes the app more portable and easier to deploy. The app also uses docker-compose, a tool that lets you define and run multiple containers with a single command.
 
 ## Installation
