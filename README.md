@@ -15,6 +15,11 @@ This project uses the following technologies:
 - Mongoose: An object data modeling (ODM) library that provides a schema-based solution to model your application data and interact with MongoDB.
 - Docker: A tool for building and running containerized applications.
 
+## Screenshots
+
+<img src="public/assets/Screenshot-homepage.png" height="300" alt="Screenshot-homepage">
+<img src="public/assets/Screenshot-new-message.png" height="300" alt="Screenshot-new-message">
+
 ## Features
 
 Mini Message Board has the following features:
