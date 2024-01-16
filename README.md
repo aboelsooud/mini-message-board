@@ -17,7 +17,10 @@ This project uses the following technologies:
 
 ## Screenshots
 
+### Home Page
 <img src="public/assets/Screenshot-homepage.png" height="300" alt="Screenshot-homepage">
+
+### Add New Message Page
 <img src="public/assets/Screenshot-new-message.png" height="300" alt="Screenshot-new-message">
 
 ## Features
